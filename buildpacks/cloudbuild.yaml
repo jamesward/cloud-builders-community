@@ -1,9 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/buildpacks:v3', '.']
-  waitFor: ['-']
-  
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['tag', 'gcr.io/$PROJECT_ID/buildpacks:v3', 'gcr.io/$PROJECT_ID/buildpacks']
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/buildpacks', '.']
 
-images: ['gcr.io/$PROJECT_ID/buildpacks', 'gcr.io/$PROJECT_ID/buildpacks:v3']
+images: ['gcr.io/$PROJECT_ID/buildpacks']
